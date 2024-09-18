@@ -1,25 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*{
+  font-family: "SUSE", sans-serif;
 }
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+.bg-sofblue-gradients{
+  background-image: linear-gradient(to bottom, #A7C7E7 0%, transparent 100%) ;
 }
 
+.bg-beige-gradients{
+  background-image: linear-gradient(to bottom, #F5E8C7 0%, transparent 100%)  ;
+}
+.bg-palegreen-gradients{
+  background-image: linear-gradient(to bottom, #D1E8E2 0%, transparent 100%)  ;
+}
+.bg-coral-gradients{
+  background-image: linear-gradient(to bottom, #FF6F61 0%, transparent 100%)  ;
+}
+.bg-gray-gradients{
+  background-image: linear-gradient(to bottom, #E1E1E1 0%, transparent 100%)  ;
+}
+.text-navy{
+  color: #0A2540;
+}
+.text-brown{
+  color: #4B3832;
+}
+.text-forest{
+  color: #2E4A42;
+}
+.text-charcoal{
+  color: #333333;
+}
+.text-white{
+  color: #464444;
+}
+.sidebar{
+  border-right: 2px solid #5b5b5c;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
