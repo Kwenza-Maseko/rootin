@@ -4,7 +4,9 @@ import "./globals.css";
 import {
   ClerkProvider,
   SignedIn,
-} from '@clerk/nextjs'
+  SignedOut,
+  RedirectToSignIn,
+} from "@clerk/nextjs";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import BottomNavbar from "@/components/BottomNavbar";
@@ -39,23 +41,34 @@ export default function RootLayout({
         }}
       >
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased text-sm`}>
+          className={`${geistSans.variable} ${geistMono.variable} antialiased text-sm`}
+        >
           <div className="flex text-zinc-200 h-dvh">
-            <SignedIn>
-              <div className="flex bg-zinc-900 overflow-y-hidden  w-full">
+            {/* Handle SignedIn state */}
+            <div className="flex bg-zinc-900 overflow-y-hidden w-full">
+
+              <SignedIn>
                 <div className="sidebar flex-none w-fit px-2 py-1 hidden md:block bg-zinc-800">
                   <Sidebar />
                 </div>
-                <div className="grow ">
+              </SignedIn>
+              <div className="grow">
+                <SignedIn>
                   <Navbar />
-                  {children}
-                </div>
-              </div>
 
-              <div className="md:hidden block fixed bottom-0 z-10">
-                <BottomNavbar />
+                </SignedIn>
+                {children}
               </div>
-            </SignedIn>
+            </div>
+
+            <div className="md:hidden block fixed bottom-0 z-10">
+              <BottomNavbar />
+            </div>
+
+            {/* Handle SignedOut state */}
+            <SignedOut>
+              <RedirectToSignIn redirectUrl="/" />
+            </SignedOut>
           </div>
         </body>
       </ClerkProvider>
