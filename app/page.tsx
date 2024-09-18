@@ -35,7 +35,8 @@ export default function Home() {
       <div className={`${bgColors.bg} py-2 pb-10 md:px-5 px-2`}>
         <p className={`${bgColors.text} font-bold capitalize`} style={{ fontSize: "18pt" }}>good to see you {user?.firstName}!!</p>
         <p className={`${bgColors.text} capitalize font-medium mt-3`}>word of the day</p>
-        <p className={`${bgColors.text} capitalize font-medium`}>"surviving is winning, whatever you do. Survive"</p>
+        <p className={`${bgColors.text} capitalize font-medium`}>&quot;surviving is winning, whatever you do. Survive&quot;</p>
+
 
         <div className="flex flex-col justify-center gap-5 rounded-2xl py-10 bg-zinc-900 mt-5">
           <div className="text-center">
