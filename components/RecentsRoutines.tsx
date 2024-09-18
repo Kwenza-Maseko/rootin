@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createClient, PhotosWithTotalResults, ErrorResponse, Photo } from 'pexels';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const RecentsRoutines = () => {
   const [photo, setPhoto] = useState<Photo | null>(null); // Set initial state to null, and Photo type

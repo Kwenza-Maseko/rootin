@@ -1,8 +1,6 @@
 'use client';
-import Image from "next/image";
-import { currentUser } from "@clerk/nextjs/server";
 import shuffle from "lodash/shuffle";
-import { UserButton, useUser } from "@clerk/nextjs";
+import {  useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { HiOutlineCalendar } from "react-icons/hi2";

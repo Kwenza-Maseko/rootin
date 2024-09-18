@@ -3,7 +3,6 @@ import { GoHomeFill } from 'react-icons/go';
 import { FaRoute } from 'react-icons/fa6';
 import { LuListTodo } from 'react-icons/lu';
 import { usePathname } from 'next/navigation';
-import { sidebarList } from '@/constants';
 import Link from 'next/link';
 import Image from 'next/image';
 const icons = [

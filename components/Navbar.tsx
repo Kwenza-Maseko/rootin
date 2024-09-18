@@ -1,8 +1,7 @@
 'use client'
 import {
   UserButton,
-  useUser,
-  UserProfile
+  useUser
 } from "@clerk/nextjs";
 import Link from "next/link";
 import { RiArrowDropDownLine } from "react-icons/ri";

@@ -3,10 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import {
   ClerkProvider,
-  SignInButton,
   SignedIn,
-  SignedOut,
-  UserButton
 } from '@clerk/nextjs'
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
